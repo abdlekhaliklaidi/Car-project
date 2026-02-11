@@ -1,0 +1,9 @@
+.car-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+.car-card img {
+  width: 100%;
+}

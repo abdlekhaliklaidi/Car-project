@@ -1,0 +1,9 @@
+<div class="cars">
+  <div class="car-card" *ngFor="let car of cars">
+    <img [src]="car.imageUrl" />
+    <h3>{{ car.category }}</h3>
+    <p>{{ car.brand }} {{ car.model }}</p>
+    <p>{{ car.pricePerDay }} $ / day</p>
+    <button>Book Now</button>
+  </div>
+</div>
