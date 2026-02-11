@@ -1,9 +1,48 @@
-<div class="cars">
-  <div class="car-card" *ngFor="let car of cars">
-    <img [src]="car.imageUrl" />
-    <h3>{{ car.category }}</h3>
-    <p>{{ car.brand }} {{ car.model }}</p>
-    <p>{{ car.pricePerDay }} $ / day</p>
-    <button>Book Now</button>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="nav-logo">Moussaid Car</div>
+
+  <ul class="nav-links">
+    <li>Home</li>
+    <li>Cars</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+
+  <button class="nav-btn">Login</button>
+</nav>
+
+<!-- ===== PAGE ===== -->
+<div class="page">
+
+  <h1 class="page-title">Available Cars</h1>
+  <app-reservation-search></app-reservation-search>
+  <div class="cars">
+    <div class="car-card" *ngFor="let car of cars">
+
+      <div class="image-container">
+        <img [src]="car.imageUrl" />
+
+        <div class="badge">
+          {{ car.category }}
+        </div>
+      </div>
+
+      <div class="car-content">
+        <h3>{{ car.brand }} {{ car.model }}</h3>
+
+        <p class="category">{{ car.category }}</p>
+
+        <p class="price">
+          {{ car.pricePerDay }} $ / day
+        </p>
+
+        <button class="book-btn">
+          Book Now
+        </button>
+      </div>
+
+    </div>
   </div>
+
 </div>

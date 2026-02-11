@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarService } from './../services/car.service';
 import { Car } from './../models/car.model';
+import { ReservationSearchComponent } from './reservation-search.component';
 
 @Component({
   selector: 'app-car-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReservationSearchComponent],
   templateUrl: './car-list.component.html',
   styleUrls: ['./car-list.component.css']
 })
